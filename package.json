@@ -9,7 +9,7 @@
   "scripts": {
     "test": "test",
     "start-dev": "webpack -w & nodemon server.js",
-    "start": "webpack-dev-server --mode development --open & npm run watch",
+    "start": "webpack-dev-server --open & npm run watch",
     "watch": "webpack -d --watch",
     "build": "webpack --mode production"
   },
