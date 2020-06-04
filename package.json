@@ -7,11 +7,7 @@
     "node": ">= 7.0.0"
   },
   "scripts": {
-    "test": "test",
-    "start-dev": "webpack -w & nodemon server.js",
-    "start": "webpack-dev-server --open & npm run watch",
-    "watch": "webpack -d --watch",
-    "build": "webpack --mode production"
+    "test": "test"
   },
   "author": "",
   "license": "ISC",
