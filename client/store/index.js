@@ -1,21 +1,18 @@
-import { createStore, applyMiddleware } from 'redux';
-// import yourReducer from './yourReducer';
-import thunkMiddleware from 'redux-thunk';
-import { createLogger } from 'redux-logger';
+import {createStore, combineReducers, applyMiddleware} from 'redux'
+import {createLogger} from 'redux-logger'
+import thunkMiddleware from 'redux-thunk'
+import {composeWithDevTools} from 'redux-devtools-extension'
+import user from './user'
+import entries from './entries'
+import prompts from './prompts'
 
+const reducer = combineReducers({user, entries, prompts})
+const middleware = composeWithDevTools(
+  applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))
+)
+const store = createStore(reducer, middleware)
 
-
-function reducer (state = {}, action) {
-  return state;
-}
-
-const store = createStore(
-  reducer,
-  applyMiddleware(
-    thunkMiddleware,
-    createLogger()
-  )
-);
-
-export default store;
-
+export default store
+export * from './user'
+export * from './entries'
+export * from './prompts'
