@@ -42,7 +42,6 @@ export class UserHome extends React.Component {
           <span className="mdc-button__label">Edit Profile</span>
           <img
             src="https://image.flaticon.com/icons/svg/61/61456.svg"
-            className="material-icons mdc-button__icon"
             aria-hidden="true"
           />
         </button>

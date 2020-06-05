@@ -4,8 +4,6 @@ import {connect} from 'react-redux'
 import {gotPrompts, addPrompt, removePrompt} from '../store/prompts'
 import {Link} from 'react-router-dom'
 import CreatePrompt from './CreatePrompt'
-// import {Dropdown} from 'semantic-ui-react'
-// import _ from 'lodash'
 
 export class UserPrompts extends React.Component {
   constructor() {
