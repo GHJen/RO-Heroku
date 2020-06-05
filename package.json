@@ -2,14 +2,15 @@
   "name": "ro-heroku",
   "version": "1.0.0",
   "description": "Trying to deploy",
-  "main": "server/server.js",
+  "main": "server",
   "engines": {
     "node": ">= 7.0.0"
   },
   "scripts": {
     "test": "test",
-    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "start": "node server",
     "start-dev": "NODE_ENV='development' npm run build-client-watch & NODE_ENV='development' npm run start-server",
+    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
     "watch": "webpack -d --watch",
     "build": "webpack --mode production"
   },

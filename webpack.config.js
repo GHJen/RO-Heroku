@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './server/server.js', // assumes your entry point is the index.js in the root of your project folder
+  entry: './server', // assumes your entry point is the index.js in the root of your project folder
   mode: 'development',
   output: {
     path: __dirname, // assumes your bundle.js will also be in the root of your project folder
@@ -20,6 +20,8 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
+          'babel-loader',
+          'eslint-loader'
         ]
       }
     ]
