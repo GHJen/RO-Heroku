@@ -50,9 +50,7 @@ if (!process.env.GOOGLE_CLIENT_ID || !process.env.GOOGLE_CLIENT_SECRET) {
 
   router.get(
     '/',
-    passport.authenticate('google', {scope: ['email',
-    // 'profile'
-  ]})
+    passport.authenticate('google', {scope: ['email', 'profile']})
   )
 
   router.get(

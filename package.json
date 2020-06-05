@@ -8,8 +8,9 @@
   },
   "scripts": {
     "test": "test",
-    "start-dev": "webpack -w & nodemon server.js",
-    "start": "webpack-dev-server --open & npm run watch",
+    "start": "node server/server.js",
+    "start-dev": "NODE_ENV='development' npm run build-client-watch & NODE_ENV='development' npm run start-server",
+    "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
     "watch": "webpack -d --watch",
     "build": "webpack --mode production"
   },
