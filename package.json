@@ -19,9 +19,9 @@
   "dependencies": {
     "@material-ui/core": "^4.10.1",
     "axios": "^0.19.2",
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.20.1",
     "connect-session-sequelize": "^6.1.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "express-session": "^1.17.1",
     "history": "^4.10.1",
     "lodash": "^4.17.15",
